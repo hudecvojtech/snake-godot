@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wi6wepw3frgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv3pi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fve02"]
+
+[node name="Wall" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_uv3pi")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fve02")

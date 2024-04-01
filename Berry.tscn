@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://rqftiv6sumri"]
+
+[ext_resource type="Script" path="res://Berry.cs" id="1_tu211"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_737ne"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq2bs"]
+bg_color = Color(1, 0.27451, 0.592157, 1)
+
+[node name="Berry" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_tu211")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_737ne")
+
+[node name="Berry" type="Panel" parent="."]
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mq2bs")
+
+[connection signal="area_shape_entered" from="." to="." method="OnAreaShapeEntered"]

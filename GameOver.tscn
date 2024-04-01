@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://gli6h12w2y48"]
+
+[ext_resource type="Script" path="res://GameOver.cs" id="1_4htbn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_meoqk"]
+font_size = 20
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_4htbn")
+
+[node name="GameOverLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 450.0
+offset_top = 100.0
+offset_right = 565.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_meoqk")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 450.0
+offset_top = 150.0
+offset_right = 502.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: "
+
+[node name="ExitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 450.0
+offset_top = 200.0
+offset_right = 487.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+
+[node name="RestartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 500.0
+offset_top = 200.0
+offset_right = 565.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
